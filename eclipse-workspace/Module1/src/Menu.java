@@ -1,6 +1,9 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
 
-public class Menu {
+public class Menu implements ActionListener{
     public static void main(String[] args) {
         new Menu().createUI();
     }
@@ -23,9 +26,36 @@ public class Menu {
         panel.add(binToHexButton);
         panel.add(decToBinButton);
         panel.add(decToHexButton);
+        panel.add(hexToBinButton);
         panel.add(hexToDecButton);
         frame.pack();
         
         frame.setVisible(true);
+        
+        binToDecButton.addActionListener(this);
+    }
+
+    //Leads buttons to a prompt
+    @Override
+    public void actionPerformed(ActionEvent event) {
+        if(event.getSource() == binToDecButton) {
+            JOptionPane.showMessageDialog(null, "Yeet");
+        }
+        if(event.getSource() == binToHexButton) {
+            JOptionPane.showMessageDialog(null, "Yeet");
+        }
+        if(event.getSource() == decToBinButton) {
+            JOptionPane.showMessageDialog(null, "Yeet");
+        }
+        if(event.getSource() == decToHexButton) {
+            JOptionPane.showMessageDialog(null, "Yeet");
+        }
+        if(event.getSource() == hexToBinButton) {
+            JOptionPane.showMessageDialog(null, "Yeet");
+        }
+        if(event.getSource() == hexToDecButton) {
+            JOptionPane.showMessageDialog(null, "Yeet");
+        }
+        
     }
 }
